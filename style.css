@@ -1,0 +1,240 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f5fb;
+    color: #202944;
+    min-height: 100vh;
+}
+
+.header {
+    background: white;
+    padding: 22px 8%;
+    border-bottom: 1px solid #e5e8f0;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #5146e5;
+}
+
+.header p {
+    margin-top: 7px;
+    color: #737b91;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 760px;
+    width: 92%;
+    margin: 40px auto;
+}
+
+.welcome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.welcome h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.welcome p {
+    color: #737b91;
+    line-height: 1.5;
+}
+
+button {
+    border: none;
+    padding: 12px 18px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+}
+
+button:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #a5a0ff;
+    outline-offset: 3px;
+}
+
+.primary-btn {
+    background: #5146e5;
+    color: white;
+}
+
+.secondary-btn {
+    background: #e9eaff;
+    color: #5146e5;
+}
+
+.delete-btn {
+    background: #ffe9e9;
+    color: #cf3030;
+}
+
+.progress-section {
+    margin-bottom: 18px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    color: #737b91;
+    font-size: 13px;
+}
+
+.progress-track {
+    grid-column: 1 / -1;
+    height: 7px;
+    background: #e0e3ef;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #5146e5;
+    transition: width 0.3s;
+}
+
+.flashcard {
+    background: white;
+    min-height: 300px;
+    padding: 40px 28px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(31, 41, 75, 0.07);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card-label {
+    color: #5146e5;
+    background: #efeeff;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.flashcard h2 {
+    font-size: 24px;
+    line-height: 1.5;
+    margin: 25px 0 15px;
+    overflow-wrap: anywhere;
+}
+
+.flashcard p {
+    color: #858ba0;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.navigation,
+.manage-buttons,
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.manage-buttons {
+    margin-top: 14px;
+}
+
+.form-section {
+    background: white;
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(31, 41, 75, 0.05);
+}
+
+.form-section h2 {
+    margin-bottom: 20px;
+}
+
+.form-section label {
+    display: block;
+    font-weight: bold;
+    margin: 15px 0 8px;
+}
+
+.form-section textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d9ddeb;
+    border-radius: 9px;
+    font: inherit;
+    resize: vertical;
+}
+
+.form-buttons {
+    justify-content: flex-start;
+}
+
+#emptyMessage {
+    margin-top: 25px;
+    text-align: center;
+    color: #737b91;
+    line-height: 1.6;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 520px) {
+    .header {
+        padding: 20px 5%;
+    }
+
+    .container {
+        margin: 28px auto;
+    }
+
+    .welcome {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .welcome h1 {
+        font-size: 26px;
+    }
+
+    .flashcard {
+        min-height: 280px;
+        padding: 30px 18px;
+    }
+
+    .flashcard h2 {
+        font-size: 21px;
+    }
+
+    .navigation button,
+    .manage-buttons button {
+        flex: 1;
+    }
+}

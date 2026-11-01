@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">📚 FlashLearn</div>
+        <p>Learn something new every day</p>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <div>
+                <h1>Flashcard Quiz</h1>
+                <p>Test your knowledge, one card at a time.</p>
+            </div>
+            <button id="addBtn" class="primary-btn">+ Add Card</button>
+        </section>
+
+        <section class="progress-section">
+            <span id="cardCounter">Card 1 of 5</span>
+            <span id="progressPercent">20% completed</span>
+            <div class="progress-track">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+        </section>
+
+        <section class="flashcard" id="flashcard">
+            <span id="cardLabel" class="card-label">QUESTION</span>
+            <h2 id="cardContent">Loading question...</h2>
+            <p id="cardHint">Think about your answer before revealing it.</p>
+            <button id="showAnswerBtn" class="primary-btn">
+                Show Answer
+            </button>
+        </section>
+
+        <div class="navigation">
+            <button id="prevBtn" class="secondary-btn">← Previous</button>
+            <button id="nextBtn" class="primary-btn">Next →</button>
+        </div>
+
+        <div class="manage-buttons">
+            <button id="editBtn" class="secondary-btn">✏️ Edit Card</button>
+            <button id="deleteBtn" class="delete-btn">🗑 Delete Card</button>
+        </div>
+
+        <section class="form-section" id="formSection" hidden>
+            <h2 id="formTitle">Add a Flashcard</h2>
+
+            <form id="cardForm">
+                <label for="questionInput">Question</label>
+                <textarea id="questionInput" rows="3"
+                    placeholder="Enter your question..." required></textarea>
+
+                <label for="answerInput">Answer</label>
+                <textarea id="answerInput" rows="3"
+                    placeholder="Enter the answer..." required></textarea>
+
+                <div class="form-buttons">
+                    <button type="submit" class="primary-btn" id="saveBtn">
+                        Save Card
+                    </button>
+                    <button type="button" class="secondary-btn" id="cancelBtn">
+                        Cancel
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <p id="emptyMessage" hidden>
+            No flashcards yet. Click "Add Card" to create your first card.
+        </p>
+
+    </main>
+
+    <footer>
+        <p>Made with ❤️ for learning | CodeAlpha Internship Project By Kushal Surana</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
